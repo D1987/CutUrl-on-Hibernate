@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="classes.References" table="reference" catalog="diplom">
+        <id name="idRef" type="java.lang.Integer">
+            <column name="id_reference" />
+            <generator class="native" /> <!--was identity-->
+        </id>
+
+        <property name="full_ref" type="string">
+            <column name="full_ref" not-null="true" />
+        </property>
+        <property name="cut_ref" type="string">
+            <column name="cut_ref" length="22" not-null="true" unique="true"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <property name="count" type="string">
+            <column name="count" length="100" />
+        </property>
+        <property name="tag" type="string">
+            <column name="tag" length="80"/>
+        </property>
+        <property name="qrcode" type="java.sql.Blob">
+            <column name="qrcode"/>
+        </property>
+
+        <!--<property name="idUsers" type="java.lang.Integer">
+            <column name="id_users" length="11" />
+        </property>-->
+        <property name="idU" type="java.lang.Integer">
+            <column name="idU" length="11"/>
+        </property>
+
+        <many-to-one name="user" class="classes.User"
+                     column="id_users" not-null="true"
+                     cascade="all" />
+    </class>
+</hibernate-mapping>

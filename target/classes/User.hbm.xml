@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="classes.User" table="users" catalog="diplom">
+        <id name="idUsers" type="java.lang.Integer">
+            <column name="id_users" />
+            <generator class="native" />   <!--was identity-->
+        </id>
+        <property name="login" type="string">
+            <column name="login" length="30" not-null="true" unique="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="mail" type="string">
+            <column name="mail" length="80" not-null="true" unique="true" />
+        </property>
+    </class>
+</hibernate-mapping>
