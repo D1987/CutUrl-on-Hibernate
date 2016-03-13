@@ -1,0 +1,6 @@
+servlets\ReferCutTest.class
+servlets\UserDataTest.class
+classes\MailServiceTest.class
+classes\QRCodeGeneratoeTest.class
+servlets\UserRegistracTest.class
+classes\ReferencesTest.class

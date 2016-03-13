@@ -239,15 +239,9 @@ $(document).ready(function () {
 })
 //poyavlenie spiska tegov
 function runIt() {
-
-    if($(".refAll").width === 270){
-        setTimeout("$('#tags').slideDown('slow')", 850);
-    }
-    else{$(".refAll").animate({marginLeft:'-=230',width: "350px"},1000);
-        $(".refAll").find('a').animate({'padding-left' : "10px"},1000);
-        setTimeout("$('#tags').slideDown('slow')", 850);}
-
-
+    $(".refAll").animate({marginLeft:'-=230',width: "350px"},1000);
+    $(".refAll").find('a').animate({'padding-left' : "10px"},1000);
+    setTimeout("$('#tags').slideDown('slow')", 850);
 }
 //close spiska tegov
 $(document).on('click','#clk', function(){
