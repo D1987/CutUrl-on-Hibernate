@@ -85,9 +85,9 @@ public class ReferCut extends HttpServlet {
     }
 
     public String sokrashtel() {
-    String  sokr = "cut-linki.rhcloud.com/by/";
+    String  sokr = "localhost:81/by/";
     char symbol;
-       while (sokr.length() < 31) {
+       while (sokr.length() < 22) {
             int chislo = (int) (Math.random() * 122);
             if ((chislo >= 0 && chislo <= 9) || (chislo >= 65 && chislo <= 90) || (chislo >= 97 && chislo <= 122)) {
                 if (chislo >= 0 && chislo <= 9)             //dlya chisel

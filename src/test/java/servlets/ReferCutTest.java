@@ -31,7 +31,7 @@ public class ReferCutTest {
     public void testProverkaMail() throws Exception {
         ReferCut r = new ReferCut();
         int b = r.sokrashtel().length();
-        assertEquals(31, b);
+        assertEquals(22, b);
     }
 
 }
