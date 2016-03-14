@@ -38,10 +38,10 @@ public class ReferRedirectOut extends HttpServlet
         references = Factory.getInstance().getRefDAO().getRefByCutRef(url);
 
         if (references==null) {
-            resp.sendRedirect("http://localhost:81/notFound.jsp");
+            resp.sendRedirect("../notFound.jsp");
         }
         else {
-            resp.sendRedirect("http://localhost:81/ReferRedirect?id="+references.getIdRef());
+            resp.sendRedirect("../ReferRedirect?id="+references.getIdRef());
         }
     }
 }

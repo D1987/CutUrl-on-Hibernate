@@ -10,13 +10,12 @@ import static org.junit.Assert.*;
 public class ReferCutTest {
 
     //inspect existance long ref
-   /* @Test
+    @Test
     public void testProverkaExLongRef() throws Exception {
         ReferCut r = new ReferCut();
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         Map<Integer, Integer> b = r.provRef("http://devcolibri.com/1250");
-        assertEquals(map, b);
-    }*/
+        assertNull(b);
+    }
 
     //inspect regex long ref
     @Test
