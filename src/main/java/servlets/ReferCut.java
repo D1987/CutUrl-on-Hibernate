@@ -20,6 +20,7 @@ public class ReferCut extends HttpServlet {
     {
         String ssylka = request.getParameter("ssylka");
         Integer id = Integer.parseInt(request.getParameter("idU"));
+        String tag = request.getParameter("tag");
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         PrintWriter out;
         int idU = 0;
@@ -32,6 +33,14 @@ public class ReferCut extends HttpServlet {
         else if(!provURL(ssylka)) {
         out = response.getWriter();
         out.print("neCorr");
+        }
+        else if(tag.length()>20) {
+            out = response.getWriter();
+            out.print("dlinna");
+        }
+        else if(tag.contains("#") || tag.contains(" ")) {
+            out = response.getWriter();
+            out.print("invalidChar");
         }
         else
         {
@@ -59,7 +68,7 @@ public class ReferCut extends HttpServlet {
                     }
             }else {
                 try {
-                    insertRefrence(request, response, ssylka, sokr, file, id);
+                    insertRefrence(request, response, ssylka, sokr,tag, file, id);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
@@ -103,10 +112,9 @@ public class ReferCut extends HttpServlet {
         return sokr;
     }
 
-    public void insertRefrence(HttpServletRequest req, HttpServletResponse resp,String ssylka,String sokr, File file,int id) throws ServletException, IOException, SQLException {
+    public void insertRefrence(HttpServletRequest req, HttpServletResponse resp,String ssylka,String sokr,String tag, File file,int id) throws ServletException, IOException, SQLException {
         String login = req.getParameter("login");
         String desc = req.getParameter("description");
-        String tag = req.getParameter("tag");
         PrintWriter out;
         User user;
         user = Factory.getInstance().getUserDAO().getUserById(id);

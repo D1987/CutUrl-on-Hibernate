@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.sql.Blob;
@@ -24,7 +25,7 @@ public class ReferQR extends HttpServlet {
         }
 
         Blob qr = references.getQrcode();
-        String filePath = "D:/DIMA/IT/IPO/Diplom/Diplom/trash/qr.png";
+        String filePath = "D:DIMA/IT/IPO/Diplom/DiplomHibernate/src/main/webapp/images/qr.png";
         try {
             byte[] blobBytes = qr.getBytes(1, (int) qr.length());
             FileOutputStream outputStream = new FileOutputStream(filePath);

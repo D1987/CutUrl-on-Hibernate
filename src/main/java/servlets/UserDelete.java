@@ -27,7 +27,7 @@ public class UserDelete extends HttpServlet {
     private void deletUser(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, SQLException {
         int idU = Integer.parseInt(request.getParameter("idU"));
         String mail;
-        Map<Integer,Integer> map = new HashMap<Integer, Integer>();
+        Map<Integer,Integer> map;
         User user;
 
         user = Factory.getInstance().getUserDAO().getUserById(idU);

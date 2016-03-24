@@ -19,7 +19,9 @@ public class QRCodeGenerator {
 
     synchronized public static File qrGeneration(String ref) {
 
-        String filePath = "D:/DIMA/IT/IPO/Diplom/Diplom/trash/qr.png";
+        String filePath = "D:DIMA/IT/IPO/Diplom/DiplomHibernate/src/main/webapp/images/qr.png";
+        System.out.println(new File("qr.png").getAbsolutePath());
+
         int size = 100;
         String fileType = "png";
         File myFile = new File(filePath);

@@ -47,13 +47,13 @@ public class UserRegistrac extends HttpServlet
         PrintWriter out;
 
         //proverka sushestvovaniya parol/login/mail v base
-        if(proverkaMail(mail)){
-            out = resp.getWriter();
-            out.print("mailIs");
-        }
-        else if ((mail.equals("") || mail.equals(null))) {
+        if (mail==null || mail.trim().isEmpty()) {
             out = resp.getWriter();
             out.print("mail");
+        }
+        else if(proverkaMail(mail)){
+            out = resp.getWriter();
+            out.print("mailIs");
         }
         else if (!testMail(mail)) {
             out = resp.getWriter();
@@ -67,7 +67,7 @@ public class UserRegistrac extends HttpServlet
             out = resp.getWriter();
             out.print("loginIs");
         }
-        else if(login.equals("") || login.equals(null)){
+        else if(login==null || login.trim().isEmpty()){
             out = resp.getWriter();
             out.print("login");
         }
@@ -75,7 +75,7 @@ public class UserRegistrac extends HttpServlet
             out = resp.getWriter();
             out.print("anotherSymDlinna");
         }
-        else if(password.equals("") || password.equals(null)){
+        else if(password==null || password.trim().isEmpty()){
             out = resp.getWriter();
             out.print("password");
         }
@@ -87,7 +87,7 @@ public class UserRegistrac extends HttpServlet
             out = resp.getWriter();
             out.print("passwordLogin");
         }
-        else if(password2.equals("") || password2.equals(null)) {
+        else if(password2==null || password2.trim().isEmpty()) {
             out = resp.getWriter();
             out.print("password2");
         }
@@ -99,7 +99,7 @@ public class UserRegistrac extends HttpServlet
 
     public static boolean proverkaExistanceMail(String mail) throws SQLException {
         boolean pr = false;
-        Map<String,String> map = new HashMap<String, String>();
+        Map<String,String> map;
         map = new Mail().selectDomain(mail);
         if(map == null || map.size()==0){
             pr = true;

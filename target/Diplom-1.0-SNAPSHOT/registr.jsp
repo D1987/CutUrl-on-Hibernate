@@ -1,6 +1,5 @@
 <%@ page import="classes.Mail" %>
 <%@ page import="java.util.Map" %>
-<%@ page import="java.util.HashMap" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -15,7 +14,7 @@
     <%
       String url = null;
       String name = null;
-      Map<String,String> map = new HashMap<String, String>();
+      Map<String,String> map;
       Mail par = new Mail();
       map = par.selectDomain(request.getParameter("mail"));
       for (Map.Entry<String,String> entry:map.entrySet()){

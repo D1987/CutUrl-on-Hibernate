@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -52,7 +52,7 @@ body{
     background-image: url("/images/much.jpg");
     background-repeat: repeat;
 }
-                                                                /*HEAD*/
+/*HEAD*/
 /*center block*/
 .main{
     width: 960px;
@@ -142,7 +142,7 @@ body{
 #butRedirSokr:hover{
     background: #ea112a;
 }
-                                                        /*CONTENT*/
+/*CONTENT*/
 /*text*/
 #textCut{
     font-size:25px;
@@ -181,6 +181,7 @@ body{
     top: 0;
     background: #EE6123;
     transition: 0.2s;
+    z-index: 4;
 }
 /*text on zakladke slide menu left*/
 #povorot{
@@ -293,11 +294,12 @@ body{
 #updateRef{
     position: fixed;
     height: 350px;
-    width: 310px;
-    top: 200px;;
-    left:1273px;
+    width: 305px;
+    top: 31%;
+    left:80.5%;
     background: #444749;
     display: none;
+    z-index:5;
 }
 #upRef{
     cursor: pointer;
@@ -307,7 +309,7 @@ body{
     cursor: pointer;
 }
 #updateRef ul li {
-   padding: 5px;
+    padding: 5px;
 }
 #bUpdateRef{
     border: medium none;
@@ -321,9 +323,6 @@ body{
     margin:-15px 0 0 5px;
 }
 #bCloseR {
-    position: relative;
-    top: 0;
-    left: 280px;
     cursor: pointer;
 }
 /*cut ref*/
@@ -364,7 +363,7 @@ body{
     height: auto;
     position: relative;
     margin: 29px 0 0 60px;
-    width: 300px;
+    width: 370px;
     z-index: 2;
 }
 .side ul li{
@@ -410,7 +409,7 @@ table tr td{
 /*for delete and update ref*/
 .tabl{
     position: absolute;
-    right: 553px;
+    right: 483px;
     top: -20px;
     background:#3D3D3D;
 }
@@ -432,7 +431,7 @@ table tr td{
 }
 .menuRDrop{
     position: absolute;
-    width: 595px;
+    width: 525px;
     left: 100%;
     top:-9999em;
     opacity: 0;
@@ -467,7 +466,7 @@ table tr td{
     color: #079CDC;
     font-size: 20px;
     border-bottom: 1px solid #666;
-    width: 442px;
+    width: 380px;
     word-wrap:break-word;
     font-family: cursive;
     padding:5px;
@@ -477,8 +476,8 @@ table tr td{
     display: none;
     position:absolute;
     top: 253px;
-    left:363px;
-    width: 595px;
+    left:435px;
+    width: 523px;
     z-index: 1;
     background: #3d3d3d;
     overflow: hidden;
@@ -504,7 +503,7 @@ table tr td{
 /*for div tags*/
 #clo{
     position:absolute;
-    left:565px;
+    left:493px;
 }
 /*close spis tags*/
 #bCTags{
@@ -615,7 +614,7 @@ table tr td{
 /*osibki sokrasheniya ssylki*/
 #erSylka{ font-family:cursive; margin-left:6px;color:red;text-shadow: 0 1px 1px #E6230E;}
 #erDescription{ font-family:cursive;}
-#ertag{ font-family:cursive;}
+#erTag{ font-family:cursive; margin-left:6px;color:red;text-shadow: 0 1px 1px #E6230E;}
 /*errors update person data*/
 #erNewLog{ font-family:cursive;margin-left:6px;
     color:#014328;}
@@ -629,7 +628,7 @@ table tr td{
 #erTagD{
     font-family:cursive; margin-left:6px;color:red;text-shadow: 0 1px 1px #E6230E;
 }
-                                                                            /*PODVAL*/
+/*PODVAL*/
 .podval{
     position: absolute;
     width: 960px;
